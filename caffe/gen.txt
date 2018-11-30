@@ -1,0 +1,820 @@
+layer { 
+  bottom: "weighted"
+  top: "classifier1"
+  name: "classifier1"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy1"
+  type: "Accuracy"
+  bottom: "classifier1"
+  bottom: "label1"
+  top: "accuracy1"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier1"
+  bottom: "label1"
+  name: "loss1"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier2"
+  name: "classifier2"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy2"
+  type: "Accuracy"
+  bottom: "classifier2"
+  bottom: "label2"
+  top: "accuracy2"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier2"
+  bottom: "label2"
+  name: "loss2"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier3"
+  name: "classifier3"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy3"
+  type: "Accuracy"
+  bottom: "classifier3"
+  bottom: "label3"
+  top: "accuracy3"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier3"
+  bottom: "label3"
+  name: "loss3"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier4"
+  name: "classifier4"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy4"
+  type: "Accuracy"
+  bottom: "classifier4"
+  bottom: "label4"
+  top: "accuracy4"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier4"
+  bottom: "label4"
+  name: "loss4"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier5"
+  name: "classifier5"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy5"
+  type: "Accuracy"
+  bottom: "classifier5"
+  bottom: "label5"
+  top: "accuracy5"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier5"
+  bottom: "label5"
+  name: "loss5"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier6"
+  name: "classifier6"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy6"
+  type: "Accuracy"
+  bottom: "classifier6"
+  bottom: "label6"
+  top: "accuracy6"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier6"
+  bottom: "label6"
+  name: "loss6"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier7"
+  name: "classifier7"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy7"
+  type: "Accuracy"
+  bottom: "classifier7"
+  bottom: "label7"
+  top: "accuracy7"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier7"
+  bottom: "label7"
+  name: "loss7"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier8"
+  name: "classifier8"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy8"
+  type: "Accuracy"
+  bottom: "classifier8"
+  bottom: "label8"
+  top: "accuracy8"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier8"
+  bottom: "label8"
+  name: "loss8"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier9"
+  name: "classifier9"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy9"
+  type: "Accuracy"
+  bottom: "classifier9"
+  bottom: "label9"
+  top: "accuracy9"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier9"
+  bottom: "label9"
+  name: "loss9"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier10"
+  name: "classifier10"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy10"
+  type: "Accuracy"
+  bottom: "classifier10"
+  bottom: "label10"
+  top: "accuracy10"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier10"
+  bottom: "label10"
+  name: "loss10"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier11"
+  name: "classifier11"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy11"
+  type: "Accuracy"
+  bottom: "classifier11"
+  bottom: "label11"
+  top: "accuracy11"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier11"
+  bottom: "label11"
+  name: "loss11"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier12"
+  name: "classifier12"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy12"
+  type: "Accuracy"
+  bottom: "classifier12"
+  bottom: "label12"
+  top: "accuracy12"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier12"
+  bottom: "label12"
+  name: "loss12"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier13"
+  name: "classifier13"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy13"
+  type: "Accuracy"
+  bottom: "classifier13"
+  bottom: "label13"
+  top: "accuracy13"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier13"
+  bottom: "label13"
+  name: "loss13"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier14"
+  name: "classifier14"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy14"
+  type: "Accuracy"
+  bottom: "classifier14"
+  bottom: "label14"
+  top: "accuracy14"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier14"
+  bottom: "label14"
+  name: "loss14"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier15"
+  name: "classifier15"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy15"
+  type: "Accuracy"
+  bottom: "classifier15"
+  bottom: "label15"
+  top: "accuracy15"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier15"
+  bottom: "label15"
+  name: "loss15"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier16"
+  name: "classifier16"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy16"
+  type: "Accuracy"
+  bottom: "classifier16"
+  bottom: "label16"
+  top: "accuracy16"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier16"
+  bottom: "label16"
+  name: "loss16"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier17"
+  name: "classifier17"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy17"
+  type: "Accuracy"
+  bottom: "classifier17"
+  bottom: "label17"
+  top: "accuracy17"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier17"
+  bottom: "label17"
+  name: "loss17"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier18"
+  name: "classifier18"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy18"
+  type: "Accuracy"
+  bottom: "classifier18"
+  bottom: "label18"
+  top: "accuracy18"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier18"
+  bottom: "label18"
+  name: "loss18"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier19"
+  name: "classifier19"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy19"
+  type: "Accuracy"
+  bottom: "classifier19"
+  bottom: "label19"
+  top: "accuracy19"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier19"
+  bottom: "label19"
+  name: "loss19"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}
+layer { 
+  bottom: "weighted"
+  top: "classifier20"
+  name: "classifier20"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  type: "InnerProduct"
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.1
+    }
+  }
+}
+layer {
+  name: "accuracy20"
+  type: "Accuracy"
+  bottom: "classifier20"
+  bottom: "label20"
+  top: "accuracy20"
+  #include: { phase: TEST }
+}
+layer {
+  bottom: "classifier20"
+  bottom: "label20"
+  name: "loss20"
+  type: "SoftmaxWithLoss"
+  loss_weight: 1
+  include: { phase: TRAIN }
+}

@@ -1,0 +1,16 @@
+net: "iapr_train.prototxt"
+base_lr: 0.005
+lr_policy: "step"
+gamma: 0.1
+stepsize: 1600
+display: 1
+max_iter: 9600
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 9600
+snapshot_prefix: "/data2/zhangxi/models/iapr-tc12/caffe_example"
+solver_mode: GPU
+#info {
+#  type: "weight"
+#  interval: 1
+#}

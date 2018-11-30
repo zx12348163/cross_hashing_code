@@ -1,0 +1,25 @@
+Sparse Projections for High-Dimensional Binary Codes (SP)
+
+Please cite our CVPR 2015 paper if you use the code in research.
+@inproceedings{Xia2015,
+title = {Sparse Projections for High-Dimensional Binary Codes},
+author = {Yan Xia and Kaiming He and Pushmeet Kohli and and Jian Sun},
+booktitle = {CVPR},
+year = {2015}
+}
+
+The methods compared include: 
+LSH
+ITQ (http://www.unc.edu/~yunchao/itq.htm)
+BP (http://www.unc.edu/~yunchao/bpbc.htm)
+CBE (http://www.felixyu.org/cbe.html)
+
+Dataset:
+To test the code, you should first download the GIST1M dataset from OneDrive:
+http://1drv.ms/1HSLPyZ
+and change the corresponding path in LoadDataGist.m.
+Note the dataset is zero-centered before training and testing.
+
+Example:
+You can start from demo.m. The mean averaged precision (mAp, based on k-nn) will be saved in ./results/.
+
