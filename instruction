@@ -1,0 +1,16 @@
+运行代码步骤
+1、先编译caffe
+cd caffe
+make -j
+若编译时cuda出错，请看下~/.bashrc 是否
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+2、运行脚本
+cd shell
+bash +x iapr_full.sh
+注：数据集在51122机/data2/目录下
+运行完成会生成caffemodel和solverstate两个文件
+3、抽取特征
+cd extract_features
+bash +x extract_features.sh
+运行脚本前先将extract_features.sh中的model名改为生成的模型名
